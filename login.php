@@ -45,7 +45,7 @@
                            <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="register.php" onclick="toggleForm()">Sign up</a>
                         </p>
                          <p class="signup">Forgot password ?
-                           <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="#">Click Here</a>
+                           <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="forgotpass.php">Click Here</a>
                         </p>
                      </form>
                   </div>
