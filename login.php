@@ -25,16 +25,27 @@
                      <img style=" width: 350px; height: 400px;" src="HinhAnh/1.jpg">
                   </div>
                   <div class="formBx">
-                     <form action="signin.php" method="post" id="myLogin">
+                     <form action="login-check.php" method="post" id="myLogin">
+
                         <h2>Sign in</h2>
                         <?php if (isset($_GET['error'])) { ?>
-                        <p style="text-align: center" class="error"><?php echo $_GET['error']; ?></p>
+                        <p style="text-align: center;color: #F24444; padding-bottom:10px; font-weight:bold"><?php echo $_GET['error']; ?></p>
                         <?php } ?>
+                        <?php if (isset($_GET['success'])) { ?>
+                        <p style="text-align: center;color: #09a608; padding-bottom:15px; font-weight:bold;"><?php echo $_GET['success']; ?></p>
+                        <?php } ?>
+
+                       
+
                         <input type="text" placeholder="Email" name="email">
                         <input type="password"  placeholder="Password" name="password">
                         <input type="submit" value="Login">
+
                         <p class="signup">Don't have an account ?
-                           <a href="register.php" onclick="toggleForm()">Sign up</a>
+                           <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="register.php" onclick="toggleForm()">Sign up</a>
+                        </p>
+                         <p class="signup">Forgot password ?
+                           <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="#">Click Here</a>
                         </p>
                      </form>
                   </div>

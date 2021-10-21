@@ -22,23 +22,22 @@
             <div class="container">
                <div class="user signupBx">
                   <div class="formBx">
-                     <form action="signup.php" method="post">
+                     <form action="register-check.php" method="post" name="register">
                         <h2>Create an account</h2>
+
                         <?php if (isset($_GET['error'])) { ?>
-                           <p class="error"><?php echo $_GET['error']; ?></p>
+                           <p style="text-align: center;color: #F24444; padding-bottom:10px; font-weight:bold" ><?php echo $_GET['error']; ?></p>
                         <?php } ?>
-                        <?php if (isset($_GET['success'])) { ?>
-                           <p class="success"><?php echo $_GET['success']; ?><p>
-                           <?php } ?> 
-                        <input type="text" name="email" placeholder="Username" >
+
+                  
+
+                        <input type="text" name="email" placeholder="Email" >
                         <input type="password" name="password" placeholder="Create Password" >
                         <input type="password" placeholder="Confirm Password" name="re_password">
 
-                        <!-- <p>Your otp will automatically send in </p> -->
+                      
                         
-                        <input type="text" placeholder="OTP" name="#" >
-                        <input type="submit" value="Sign Up">
-
+                        <input type="submit"  value="Sign Up" name="register">
                         <p class="signup">Already have an account ?
                            <a href="login.php" onclick="toggleForm()">Sign in</a>
                         </p>

@@ -19,6 +19,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
         header("Location: login.php?error=Password is required");
 	    exit();
 	}else{
+		
 		$password= md5($password);
 		$sql = "SELECT * FROM users WHERE user_name='$email' AND password='$password'";
 		
@@ -34,12 +35,12 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 		        exit();
             }else{
             	
-            	header("Location: login.php?error=Incorect User name or password");
+            	header("Location: login.php?error=Incorect user name or password");
 		        exit();
 			}
 		}else{
 			
-			header("Location: login.php?error=Incorect User name or password");
+			header("Location: login.php?error=Incorect user name or password");
 	        exit();
 		}
 	}
